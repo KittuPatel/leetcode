@@ -36,6 +36,8 @@ class Solution:
         end = len(nums) - 1
         
         l = binary_search(self, nums, start, minIndex - 1)
-        r = binary_search(self, nums, minIndex, end)
-        return max(l,r)
+        if l == -1:   
+            r = binary_search(self, nums, minIndex, end)
+            return r
+        return l
             
