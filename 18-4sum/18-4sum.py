@@ -1,20 +1,27 @@
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        res, n = [], len(nums)
+        res = []
         nums.sort()
-        for a in range(n):
-            for b in range(a+1, n):
-                c = b+1; d = n-1
-                while c<d:
-                    sums = nums[a]+nums[b]+nums[c]+nums[d]
-                    if sums < target:
-                        c += 1
-                    elif sums > target:
-                        d -= 1
+        
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            for j in range(i+1, len(nums)):
+                if j > i+1 and nums[j] == nums[j-1]:
+                    continue
+            
+                l, r = j + 1, len(nums) - 1
+
+                while l < r:
+                    threeSum = nums[l] + nums[r] + nums[i] + nums[j]
+                    if threeSum > target:
+                        r -= 1
+                    elif threeSum < target:
+                        l += 1
                     else:
-                        toappend = [nums[a],nums[b],nums[c],nums[d]]
-                        if toappend not in res:
-                            res.append(toappend)
-                        c +=1
-                        d-=1
+                        res.append([nums[l], nums[r], nums[i], nums[j]])
+                        l += 1
+                        while l < r and nums[l] == nums[l-1]:
+                            l += 1
+
         return res
