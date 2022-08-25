@@ -3,7 +3,7 @@ class Solution:
         nums.sort()
         distance = float("inf")
         
-        for i in range(len(nums)):
+        for i in range(len(nums) - 2):
             l, r = i + 1, len(nums) - 1
             new_target = target - nums[i]
             while l < r:
