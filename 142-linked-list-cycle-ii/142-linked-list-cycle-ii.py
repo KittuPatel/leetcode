@@ -1,9 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution(object):
     def detectCycle(self, head):
         # Initialize pointers at head of linkedlist...
@@ -21,11 +15,3 @@ class Solution(object):
             # Moving head by 1 & p1 by 1 as well...
             head, p1 = head.next, p1.next
         return head     # Or return p1, they both will return the tail where cycle starts...
-                
-        
-
-                
-                
-            
-        
-    
