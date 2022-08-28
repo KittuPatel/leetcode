@@ -6,20 +6,29 @@
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
-        length = 0
-        cur = head
-        while cur is not None:
-            length += 1
-            cur = cur.next
+        slow, fast = head, head
         
-        length //= 2
-        length += 1
+        while slow is not None and fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
         
-        pointer = 1
-        cur = head
-        while length != pointer:
-            pointer += 1
-            cur = cur.next
+        return slow
         
-        return cur
+#         length = 0
+#         cur = head
+#         while cur is not None:
+#             length += 1
+#             cur = cur.next
+        
+#         length //= 2
+#         length += 1
+        
+#         pointer = 1
+#         cur = head
+#         while length != pointer:
+#             pointer += 1
+#             cur = cur.next
+        
+#         return cur
+        
         
