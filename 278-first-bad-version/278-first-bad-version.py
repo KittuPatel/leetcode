@@ -3,24 +3,14 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        start = 0
-        end = n - 1
-
+        start = 1
+        end = n
+        res = end
         while start <= end:
             mid = (start + end) // 2
-            if not isBadVersion(mid):
-                start = mid + 1
-                
-            else:   
+            if isBadVersion(mid):
                 end = mid - 1
-        return start
-    
-#     r = n-1
-#     l = 0
-#     while(l<=r):
-#         mid = l + (r-l)/2
-#         if isBadVersion(mid)==False:
-#             l = mid+1
-#         else:
-#             r = mid-1
-#     return l
+                res = mid
+            else:               
+                start = mid + 1
+        return res
