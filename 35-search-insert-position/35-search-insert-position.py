@@ -13,4 +13,4 @@ class Solution:
             else:
                 start = mid + 1
         
-        return (end) + 1
+        return start
