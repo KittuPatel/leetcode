@@ -2,7 +2,7 @@ class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         
     # multiply from both front and back
-        A = nums
+        # A = nums
         B = nums[::-1]
         
         for i in range(1, len(nums)):
@@ -12,7 +12,7 @@ class Solution:
             if B[i-1] != 0:
                 B[i] *= B[i-1]
         
-        maxA = max(A)
+        maxA = max(nums)
         maxB = max(B)
         
         return max(maxA, maxB)
