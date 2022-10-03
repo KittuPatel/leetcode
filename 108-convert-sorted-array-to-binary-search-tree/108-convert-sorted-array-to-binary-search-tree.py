@@ -14,19 +14,24 @@ class Solution:
         
         mid = (start + stop) // 2
         node = TreeNode(array[mid])
-        if bst is None:
-            bst = node
-        else:
-            # insert node
-            if array[mid] < bst.val:
-                bst.left = node
-                bst = bst.left
-            else:
-                bst.right = node
-                bst = bst.right
+        
+        node.left = self.helper(array, bst, start, mid - 1)
+        node.right = self.helper(array, bst, mid + 1, stop)
+        
+        return node
+#         if bst is None:
+#             bst = node
+#         else:
+#             # insert node
+#             if array[mid] < bst.val:
+#                 bst.left = node
+#                 bst = bst.left
+#             else:
+#                 bst.right = node
+#                 bst = bst.right
         
         
-        self.helper(array, bst, start, mid - 1)
-        self.helper(array, bst, mid + 1, stop)
+#         self.helper(array, bst, start, mid - 1)
+#         self.helper(array, bst, mid + 1, stop)
         
-        return bst
+#         return bst
