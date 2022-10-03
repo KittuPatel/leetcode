@@ -7,6 +7,9 @@
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         def dfs(node, max_so_far):
+            
+            # PRE ORDER TRAVERSAL APPROACH BECAUSE WRITING LOGIC BEFORE CALLING LEFT AND RIGHT
+            
 			#if there is no node then there is no good nodes so return 0
             if not node:
                 return 0
