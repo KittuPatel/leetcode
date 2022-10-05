@@ -14,8 +14,6 @@ class Solution:
             
             helper(root.left)
             res.append(root.val)
-            if len(res) == k:
-                return res[k-1]
             helper(root.right)
             
             return root
