@@ -15,7 +15,7 @@ class Solution:
             qLen = len(queue)
             # qLen is ensuring we iterate one level at a time
             level = []
-            for i in range(qLen):
+            for _ in range(qLen):
                 curr = queue.popleft()
                 if curr:
                     level.append(curr.val)
