@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Codec:
-
+    # pre order traversal
     def serialize(self, root):
         # convert tree to string
         res = []
