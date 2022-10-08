@@ -23,6 +23,6 @@ class Solution:
                     
             if level:
                 res.append(level)
-        
+
         lastRow = res[-1]
         return lastRow[0]
