@@ -14,8 +14,9 @@ class Solution:
             q.append((r,c))
             
             while q:
-                row, col = q.pop()
+                row, col = q.popleft()
                 
+                # right, left, top, bottom
                 directions = [[1,0], [-1,0], [0,1], [0,-1]]
                 
                 for dr, dc in directions:
