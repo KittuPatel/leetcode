@@ -16,7 +16,7 @@ class Solution:
             visited.add((row, col))
             
             while q:
-                row, col = q.pop()
+                row, col = q.popleft()
                 
                 directions = [[1,0], [-1, 0], [0, 1], [0, -1]]
                 
