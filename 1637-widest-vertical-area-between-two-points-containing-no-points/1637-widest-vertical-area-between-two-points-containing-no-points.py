@@ -5,7 +5,7 @@ class Solution:
         diff = 0
         
         for i in range(1, len(points)):
-            pointdiff = abs(points[i][0] - points[i-1][0])
+            pointdiff = points[i][0] - points[i-1][0]
             
             diff = max(diff, pointdiff)
             
