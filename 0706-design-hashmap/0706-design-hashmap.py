@@ -12,7 +12,7 @@ class MyHashMap:
             if key == kv[0]:
                 found = True
                 self.hashmap[hash_key][idx] = (key, value)
-                break
+                
                 
         if not found:
             self.hashmap[hash_key].append((key, value))
