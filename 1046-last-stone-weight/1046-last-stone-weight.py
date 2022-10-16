@@ -14,7 +14,7 @@ class Solution:
             stones.pop(max2idx)
             
             diff = abs(max1-max2)
-            
-            stones.append(diff)
+            if diff > 0: 
+                stones.append(diff)
             
         return 0
