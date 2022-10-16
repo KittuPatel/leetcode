@@ -14,4 +14,6 @@ class Solution:
             if num > pivot:
                 res.append(num)
                 
-        return res
+        nums = res
+        
+        return nums
