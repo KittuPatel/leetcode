@@ -13,13 +13,13 @@ class Solution:
             if not p and not q:
                 return True
             
-            elif not p or not q:
+            elif not p or not q or p.val != q.val:
                 return False
             
             left = dfs(p.left, q.left)
             right = dfs(p.right, q.right)
             
-            return p.val == q.val and left and right
+            return left and right
         
         return dfs(p, q)
         
