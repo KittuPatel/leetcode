@@ -16,6 +16,6 @@ class Solution:
         
         dfs(root)
         
-        vals = sorted(res, key=lambda x: abs(target - x))
+        res.sort(key=lambda x: abs(target - x))
         
-        return vals[:k]
+        return res[:k]
