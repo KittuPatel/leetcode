@@ -1,55 +1,33 @@
+from sortedcontainers import SortedList
+
 class MaxStack:
+
     def __init__(self):
-        self.stack = []
-        self.maxHeap = []
-        self.poppedIdxs = set()
-        self.i = 0
-        # Time: O(1)
-        # Space: O(1)
+        self.stack = SortedList()
+        self.maximum = SortedList()
+        self.id = 0
 
     def push(self, x: int) -> None:
-        self.stack.append((x, self.i))
-        heappush(self.maxHeap, (-x, -self.i))
-        self.i += 1
-        # Time: O(1) amortized per each of the n calls made
-        # Space: O(1) amortized per each of the n calls made
+        self.stack.add((self.id, x))
+        self.maximum.add((x, self.id))
+        self.id += 1
 
     def pop(self) -> int:
-        while self.stack and self.stack[-1][1] in self.poppedIdxs:
-            self.stack.pop()
-        self.poppedIdxs.add(self.stack[-1][1])
-        return self.stack.pop()[0]
-        # Time: O(1) amortized, for each call
-        # Space: O(1)
-        
+        i, x = self.stack.pop()
+        self.maximum.remove((x, i))
+        return x
+
     def top(self) -> int:
-        while self.stack and self.stack[-1][1] in self.poppedIdxs:
-            self.stack.pop()
-        if self.stack:
-            return self.stack[-1][0]
-        # Time: O(1)
-        # Space: O(1)
+        return self.stack[-1][1]
 
     def peekMax(self) -> int:
-        while self.maxHeap and -self.maxHeap[0][1] in self.poppedIdxs:
-            heappop(self.maxHeap)
-        if self.maxHeap:
-            return -self.maxHeap[0][0]
-        # Time: O(log(n)) where n is the length of maxHeap
-        # Soace: O(1)
+        return self.maximum[-1][0]
 
     def popMax(self) -> int:
-        if len(self.maxHeap) == 0:
-            return
-        while self.maxHeap and -self.maxHeap[0][1] in self.poppedIdxs:
-            heappop(self.maxHeap)
-        popped = heappop(self.maxHeap)
-        x, i = popped
-        x, i = -x, -i
-        self.poppedIdxs.add(i)
+        x, i = self.maximum.pop()
+        self.stack.remove((i, x))
         return x
-        # Time: O(log(n)) where n is the length of maxHeap
-        # Soace: O(1)
+
 
 
 # Your MaxStack object will be instantiated and called as such:
