@@ -7,26 +7,50 @@
 class Solution:
     def closestKValues(self, root: Optional[TreeNode], target: float, k: int) -> List[int]:
         
-        res = []
+        queue = collections.deque([])
+        
         def dfs(root):
             if root:
                 dfs(root.left)
-                res.append(root.val)
+                
+                if len(queue) < k:
+                    queue.append(root.val)
+                else: # checking if len(queue) == k
+                    if abs(queue[0] - target) > abs(root.val - target):
+                        queue.popleft()
+                        queue.append(root.val)
+                    else:
+                        return
+            
                 dfs(root.right)
-            return res
-        
+            
         dfs(root)
         
-        l = 0
-        r = k - 1
-        while r <= len(res) - 2:
-            if abs(res[r+1] - target) < abs(res[l] - target):
-                l += 1
-                r += 1
-            else:
-                return res[l: r+1]
+        return queue
+        
+        
+        
+        # O(N) SPACE AND TIME
+#         res = []
+#         def dfs(root):
+#             if root:
+#                 dfs(root.left)
+#                 res.append(root.val)
+#                 dfs(root.right)
+#             return res
+        
+#         dfs(root)
+        
+#         l = 0
+#         r = k - 1
+#         while r <= len(res) - 2:
+#             if abs(res[r+1] - target) < abs(res[l] - target):
+#                 l += 1
+#                 r += 1
+#             else:
+#                 return res[l: r+1]
             
-        return res[l: r+1]
+#         return res[l: r+1]
         
         
         
