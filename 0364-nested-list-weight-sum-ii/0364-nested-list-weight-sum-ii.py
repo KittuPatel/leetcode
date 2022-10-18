@@ -51,7 +51,7 @@ class Solution:
         while q:
             cur, depth = q.popleft()
             maxDepth = max(maxDepth, depth)
-            
+
             for element in cur:
                 if element.isInteger():
                     temp.append((element.getInteger(), depth))
@@ -59,6 +59,7 @@ class Solution:
                     if len(element.getList()) != 0:
                         q.append((element.getList(), depth + 1))
         
+
         res = 0
         for i in temp:
             res += i[0] * (maxDepth - i[1] + 1)
