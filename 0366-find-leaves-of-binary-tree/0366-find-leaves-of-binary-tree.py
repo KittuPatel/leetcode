@@ -9,7 +9,7 @@ class Solution:
         
         res = collections.defaultdict(list)
         
-        def postorder(root, height):
+        def postorder(root, height) -> int:
             if not root:
                 return height
             
