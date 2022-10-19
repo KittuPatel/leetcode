@@ -6,6 +6,8 @@ class Solution:
         width = 0
         cur_line = []
         
+        #   5 + 3 + 3 = 11
+        
         while i < len(words):
             cur_word = words[i]
             if width + len(cur_word) <= maxWidth:
