@@ -1,18 +1,12 @@
 class Solution:
     def minCost(self, costs: List[List[int]]) -> int:
-        
-        
-        # costs[i][j] => i is house and j is color
-        
-        dp = [0, 0, 0]
+        prevHouse = [0, 0, 0]
         
         for i in range(len(costs)):
+            dp0 = costs[i][0] + min(prevHouse[1], prevHouse[2])
+            dp1 = costs[i][1] + min(prevHouse[0], prevHouse[2])
+            dp2 = costs[i][2] + min(prevHouse[0], prevHouse[1])
             
-            dp0 = costs[i][0] + min(dp[1], dp[2])
-            dp1 = costs[i][1] + min(dp[0], dp[2])
-            dp2 = costs[i][2] + min(dp[0], dp[1])
-            
-            dp[0], dp[1], dp[2] = dp0, dp1, dp2
-            
-        return min(dp)
-            
+            prevHouse = [dp0, dp1, dp2]
+        
+        return min(prevHouse)
