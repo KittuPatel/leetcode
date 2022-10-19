@@ -1,13 +1,11 @@
-from sortedcontainers import SortedList
-
 class Solution:
     def sortTransformedArray(self, nums: List[int], a: int, b: int, c: int) -> List[int]:
         
-        # nums = SortedList(nums)
+        result = []
+        heapq.heapify(result)
         
-        for i in range(len(nums)):
-            nums[i] = (a* pow(nums[i], 2)) + (b*nums[i]) + c
-        
-        nums.sort()
-        
-        return nums
+        for x in nums:
+            ans = (a*x*x) + (b*x) + c
+            heapq.heappush(result, ans)
+            
+        return list(heapq.nsmallest(len(nums), result))
