@@ -6,24 +6,24 @@
 #         self.right = right
 class Solution:
     def upsideDownBinaryTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        curr = root 
-        while curr and curr.left: 
-            curr = curr.left 
+        curr = root
+        
+        while curr and curr.left:
+            curr = curr.left
             
-        self.dfs(root, None, None)
-        
-        return curr 
+        def dfs(root, parent, sibling):
+            if not root:
+                return
             
-    
-    def dfs(self, curr, par, sib): 
-        if not curr: 
-            return 
+            dfs(root.left, root, root.right)
+            dfs(root.right, None, None)
+            
+            root.left = sibling
+            root.right = parent
+            
+        dfs(root, None, None)
         
-        self.dfs(curr.left, curr, curr.right)
-        self.dfs(curr.right, None, None) 
-        
-        
-        curr.left = sib 
-        curr.right = par 
+        return curr
+            
                 
             
