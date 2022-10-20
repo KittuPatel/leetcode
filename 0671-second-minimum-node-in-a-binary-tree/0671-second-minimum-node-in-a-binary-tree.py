@@ -11,12 +11,9 @@ class Solution:
         
         def dfs(root):
             if root is not None:
-                if root.val not in res:
-                    res.add(root.val)
+                res.add(root.val)
                 dfs(root.left)
                 dfs(root.right)
-                
-            return res
         
         dfs(root)
         res.remove(min(res))
