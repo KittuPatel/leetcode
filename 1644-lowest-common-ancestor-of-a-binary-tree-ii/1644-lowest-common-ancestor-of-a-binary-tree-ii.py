@@ -8,31 +8,33 @@
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         
-        self.p_found = False
-        self.q_found = False
+        p_found = False
+        q_found = False
         
-        ans = self.dfs(root, p, q)
-        
-        return ans if self.p_found and self.q_found else None
-        
-    def dfs(self, root, p, q):
-
-        if not root:
-            return None
-
-        l = self.dfs(root.left, p, q)
-        r = self.dfs(root.right, p, q)
-
-        if root == p or root == q:
-            if root == p:
-                self.p_found = True
-            else:
-                self.q_found = True
-
-            return root
-
-        if l and r:
-            return root
-        else:
-            return l or r
+        def dfs(root):
+            nonlocal p_found
+            nonlocal q_found
             
+            if not root:
+                return None
+            
+            l = dfs(root.left)
+            r = dfs(root.right)
+            
+            if root == p or root == q:
+                if root == p:
+                    p_found = True
+                else:
+                    q_found = True
+                
+                return root
+            
+            if l and r:
+                return root
+            else:
+                return l or r            
+        
+        res = dfs(root)
+        
+        return res if p_found and q_found else None
+        
