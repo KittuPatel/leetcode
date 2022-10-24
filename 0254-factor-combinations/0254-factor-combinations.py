@@ -1,17 +1,16 @@
 class Solution:
     def getFactors(self, n: int) -> List[List[int]]:
-        results = []
+
+        res = []              # final result
+        factors = []          # one possible combination of factors
         
-        def dfs(n, subset, start, result):
-
-            while start * start <= n:
-                if n % start == 0:
-                    result.append(subset + [start, n//start])
-                    dfs(n//start, subset + [start], start, result)
-
-                start += 1
-
-            return result
-        
-        dfs(n, [], 2, results)
-        return results
+        def dfs(start, x):
+            if factors:       # ensure x != n
+                res.append(factors + [x])
+            for factor in range(start, int(sqrt(x))+1):  # set upbound to sqrt(x) to ensure x/factor >= factor
+                if x%factor == 0:
+                    factors.append(factor)
+                    dfs(factor, x/factor)
+                    factors.pop()
+        dfs(2, n)
+        return res
