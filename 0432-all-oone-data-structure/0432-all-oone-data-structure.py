@@ -1,62 +1,99 @@
 class Node:
-    def __init__(self, val, left=None, right=None):
-        self.left = left
-        self.right = right
+    def __init__(self, val= 0):
         self.val = val
-        self.count = 1
-        
-class AllOne:
+        self.next = None
+        self.pre = None
+        self.arr = set()
+
+
+class AllOne(object):
+
     def __init__(self):
-        # Create dummy nodes to faciliate code.
-        self.head, self.tail = Node("h"), Node("t")
-        self.head.count = float("inf")
-        self.tail.count = float("-inf")
-        self.tail.left = self.head
-        self.head.right = self.tail
-        self.words = {}
-
-    def inc(self, key: str) -> None:
-        if key not in self.words:
-            # If word hasn't appeared yet, attach it to the tail.
-            new_node = Node(key, self.tail.left, self.tail)
-            self.tail.left.right = self.tail.left = self.words[key] = new_node
+        """
+        Initialize your data structure here.
+        """
+        self.head = Node()
+        self.tail = Node()
+        self.head.next, self.tail.pre = self.tail, self.head
+        self.d = {}
+        
+    def move_forward(self, node, key):
+        if node.val+1 != node.next.val:
+            newNode = Node(node.val+1)
+            newNode.pre, newNode.next = node, node.next
+            newNode.pre.next = newNode.next.pre = newNode
         else:
-            # If word exists, find it and move the node towards the head as long as the occurance > it's left neighbor.
-            node = self.words[key]
-            node.count += 1
-            while node.count > node.left.count:
-                self.swap(node.left, node)
-
-    def dec(self, key: str) -> None:
-        node = self.words[key]
-        node.count -= 1
-        if node.count == 0:
-            # If count reaaches 0, we remove the node and it's mapped entry
-            node.left.right = node.right
-            node.right.left = node.left
-            del self.words[key]
+            newNode = node.next
+        newNode.arr.add(key)
+        return newNode
+    
+    def pre(self, node, key):
+        if node.val-1 != node.pre.val:
+            newNode = Node(node.val-1)
+            newNode.pre, newNode.next = node.pre, node
+            newNode.pre.next = newNode.next.pre = newNode
         else:
-            # Move node towards the tailend
-            while node.count < node.right.count:
-                self.swap(node, node.right)
+            newNode = node.pre
+        newNode.arr.add(key)
+        return newNode
 
-    def getMaxKey(self) -> str:
-        # The first node of the linked list will always be the Max
-        if not self.words:
+    def inc(self, key):
+        """
+        Inserts a new key <Key> with value 1. Or increments an existing key by 1.
+        :type key: str
+        :rtype: None
+        """
+        if key not in self.d:
+            node = self.head
+        else:
+            node = self.d[key]
+            node.arr.discard(key)
+            
+        self.d[key] = self.move_forward(node, key)
+        
+
+    def dec(self, key):
+        """
+        Decrements an existing key by 1. If Key's value is 1, remove it from the data structure.
+        :type key: str
+        :rtype: None
+        """
+        if key in self.d:
+            node = self.d[key]
+            node.arr.discard(key)
+            if node.val != 1:
+                self.d[key] = self.pre(node, key)
+            else:
+                del self.d[key]
+
+    def getMaxKey(self):
+        """
+        Returns one of the keys with maximal value.
+        :rtype: str
+        """
+        node = self.tail.pre
+        while node and len(node.arr) == 0:
+            node = node.pre
+        
+        if not node:
             return ""
-        return self.head.right.val
         
-    def getMinKey(self) -> str:
-        # The last node of the linkedlist will always be the Min
-        if not self.words:
+        val = node.arr.pop()
+        node.arr.add(val)
+        return val
+        
+
+    def getMinKey(self):
+        """
+        Returns one of the keys with Minimal value.
+        :rtype: str
+        """
+        node = self.head.next
+        while node and len(node.arr) == 0:
+            node = node.next
+        if not node:
             return ""
-        return self.tail.left.val
         
-    def swap(self, n1, n2):
-        n1.left.right = n2
-        n2.right.left = n1
-        
-        n2.left = n1.left
-        n1.left = n2
-        n1.right = n2.right
-        n2.right = n1
+        val = node.arr.pop()
+        node.arr.add(val)
+        return val
