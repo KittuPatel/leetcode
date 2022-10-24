@@ -11,13 +11,14 @@ class Solution:
             if i >= len(candidates) or total > target:
                 return 
             
+            dfs(i+1, cur, total)
             # include i index
             cur.append(candidates[i])
             dfs(i, cur, total + candidates[i])
             
             # dont include i index
             cur.pop()
-            dfs(i+1, cur, total)
+            
             
         
         dfs(0, [], 0)
