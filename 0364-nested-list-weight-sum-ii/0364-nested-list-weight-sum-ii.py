@@ -44,30 +44,29 @@
 class Solution:
     def depthSumInverse(self, nestedList: List[NestedInteger]) -> int:
         
+        totalSum = 0
         nested = []
-        maxDepth = 1
+        maxDepth = 0
         
         def dfs(nestedList, depth):
-            nonlocal nested, maxDepth
+            
+            nonlocal totalSum, maxDepth
             
             for item in nestedList:
                 maxDepth = max(maxDepth, depth)
-                
                 if item.isInteger():
-                    nested.append((item.getInteger(), depth) )
+                    nested.append((item.getInteger(), depth))
                 else:
                     dfs(item.getList(), depth+1)
             
-            return nested
-        
         dfs(nestedList, 1)
         
-        print(nested)
-        res = 0
-        for item in nested:
-            res += item[0] * (maxDepth - item[1] + 1)
+        for pair in nested:
+            totalSum += pair[0] * (maxDepth - pair[1] + 1)
+            
+        return totalSum
         
-        return res
-                
         
+            
+            
         
