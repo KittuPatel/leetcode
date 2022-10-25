@@ -1,7 +1,7 @@
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
         ftimes = [0] * n
-        stack = []
+        stack = [] # id of function calls
         prev_start_time = 0
         
         for log in logs:
