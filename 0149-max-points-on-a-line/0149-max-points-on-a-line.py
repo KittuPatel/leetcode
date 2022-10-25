@@ -20,8 +20,8 @@ class Solution:
                 else:
                     hashmap[slope] = 1
                     
-                i_max = i_max if i_max > hashmap[slope] else hashmap[slope]
+                i_max = max(i_max, hashmap[slope])
             hashmap.clear() 
-            max_points = max_points if max_points > i_max else i_max
+            max_points = max(max_points, i_max)
                     
         return max_points+1
