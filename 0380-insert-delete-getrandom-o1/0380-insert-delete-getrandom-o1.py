@@ -28,6 +28,7 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         return random.choice(self.listMap)
+        
 
 
 # Your RandomizedSet object will be instantiated and called as such:
