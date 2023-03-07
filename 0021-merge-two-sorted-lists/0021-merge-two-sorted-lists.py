@@ -11,10 +11,10 @@ class Solution:
         
         while list1 and list2:
             if list1.val < list2.val:
-                cur.next = list1
+                cur.next = ListNode(val=list1.val)
                 list1 = list1.next
             else:
-                cur.next = list2
+                cur.next = ListNode(val=list2.val)
                 list2 = list2.next
                 
             cur = cur.next
