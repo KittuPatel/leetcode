@@ -7,12 +7,8 @@ class Solution:
         length = 0
         i = len(s) - 1
         
-        for j in range(len(s) -1, -1, -1):
-            if s[j] == " ":
-                i -= 1
-            else:
-                break
-        
+        while s[i] == " ":
+            i -= 1
         
         while i >= 0:
             if s[i] != " ":
