@@ -3,8 +3,8 @@ class Solution:
         
         ans = nums.copy()
         
-        for i in range(len(nums)):
-            ans.append(nums[i])
+        for n in nums:
+            ans.append(n)
             
         return ans
         
