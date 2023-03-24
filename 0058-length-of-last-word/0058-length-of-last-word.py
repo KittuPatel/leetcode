@@ -13,8 +13,9 @@ class Solution:
         while i >= 0:
             if s[i] != " ":
                 length += 1
+                i -= 1
             else:
                 return length
-            i -= 1
+            
                 
         return length
