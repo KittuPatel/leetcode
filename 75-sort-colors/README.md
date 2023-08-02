@@ -1,31 +1,39 @@
-<h2><a href="https://leetcode.com/problems/sort-colors/">75. Sort Colors</a></h2><h3>Medium</h3><hr><div><p>Given an array <code>nums</code> with <code>n</code> objects colored red, white, or blue, sort them <strong><a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank">in-place</a> </strong>so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</p>
+# 75. Sort Colors
 
-<p>We will use the integers <code>0</code>, <code>1</code>, and <code>2</code> to represent the color red, white, and blue, respectively.</p>
+## Medium
 
-<p>You must solve this problem without using the library's sort function.</p>
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [2,0,2,1,1,0]
-<strong>Output:</strong> [0,0,1,1,2,2]
-</pre>
+Given an array `nums` with `n` objects colored red, white, or blue, sort them [**in-place**](https://en.wikipedia.org/wiki/In-place\_algorithm) so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 
-<p><strong>Example 2:</strong></p>
+We will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.
 
-<pre><strong>Input:</strong> nums = [2,0,1]
-<strong>Output:</strong> [0,1,2]
-</pre>
+You must solve this problem without using the library's sort function.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>n == nums.length</code></li>
-	<li><code>1 &lt;= n &lt;= 300</code></li>
-	<li><code>nums[i]</code> is either <code>0</code>, <code>1</code>, or <code>2</code>.</li>
-</ul>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong>&nbsp;Could you come up with a one-pass algorithm using only&nbsp;constant extra space?</p>
-</div>
+<pre><code>Input: nums = [2,0,2,1,1,0]
+<strong>Output:
+</strong> [0,0,1,1,2,2]
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: nums = [2,0,1]
+<strong>Output:
+</strong> [0,1,2]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `n == nums.length`
+* `1 <= n <= 300`
+* `nums[i]` is either `0`, `1`, or `2`.
+
+&#x20;
+
+**Follow up:** Could you come up with a one-pass algorithm using only constant extra space?

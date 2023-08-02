@@ -1,46 +1,61 @@
-<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/">1650. Lowest Common Ancestor of a Binary Tree III</a></h2><h3>Medium</h3><hr><div><p>Given two nodes of a&nbsp;binary tree <code>p</code> and <code>q</code>, return <em>their&nbsp;lowest common ancestor (LCA)</em>.</p>
+# 1650. Lowest Common Ancestor of a Binary Tree III
 
-<p>Each node will have a reference to its parent node. The definition for <code>Node</code> is below:</p>
+## Medium
 
-<pre>class Node {
+
+
+Given two nodes of a binary tree `p` and `q`, return _their lowest common ancestor (LCA)_.
+
+Each node will have a reference to its parent node. The definition for `Node` is below:
+
+```
+class Node {
     public int val;
     public Node left;
     public Node right;
     public Node parent;
 }
-</pre>
+```
 
-<p>According to the <strong><a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank">definition of LCA on Wikipedia</a></strong>: "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow <b>a node to be a descendant of itself</b>)."</p>
+According to the [**definition of LCA on Wikipedia**](https://en.wikipedia.org/wiki/Lowest\_common\_ancestor): "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow **a node to be a descendant of itself**)."
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" style="width: 200px; height: 190px;">
-<pre><strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> The LCA of nodes 5 and 1 is 3.
-</pre>
+&#x20;
 
-<p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" style="width: 200px; height: 190px;">
-<pre><strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
-<strong>Output:</strong> 5
-<strong>Explanation:</strong> The LCA of nodes 5 and 4 is 5 since a node can be a descendant of itself according to the LCA definition.
-</pre>
+**Example 1:**
 
-<p><strong class="example">Example 3:</strong></p>
+![](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
 
-<pre><strong>Input:</strong> root = [1,2], p = 1, q = 2
-<strong>Output:</strong> 1
-</pre>
+<pre><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+<strong>Output:
+</strong> 3
+<strong>Explanation:
+</strong> The LCA of nodes 5 and 1 is 3.
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li>The number of nodes in the tree is in the range <code>[2, 10<sup>5</sup>]</code>.</li>
-	<li><code>-10<sup>9</sup> &lt;= Node.val &lt;= 10<sup>9</sup></code></li>
-	<li>All <code>Node.val</code> are <strong>unique</strong>.</li>
-	<li><code>p != q</code></li>
-	<li><code>p</code> and <code>q</code> exist in the tree.</li>
-</ul>
-</div>
+![](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
+
+<pre><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+<strong>Output:
+</strong> 5
+<strong>Explanation:
+</strong> The LCA of nodes 5 and 4 is 5 since a node can be a descendant of itself according to the LCA definition.
+</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: root = [1,2], p = 1, q = 2
+<strong>Output:
+</strong> 1
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in the tree is in the range `[2, 105]`.
+* `-109 <= Node.val <= 109`
+* All `Node.val` are **unique**.
+* `p != q`
+* `p` and `q` exist in the tree.

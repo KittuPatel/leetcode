@@ -1,21 +1,33 @@
-<h2><a href="https://leetcode.com/problems/reverse-words-in-a-string-iii/">557. Reverse Words in a String III</a></h2><h3>Easy</h3><hr><div><p>Given a string <code>s</code>, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.</p>
+# 557. Reverse Words in a String III
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong> s = "Let's take LeetCode contest"
-<strong>Output:</strong> "s'teL ekat edoCteeL tsetnoc"
-</pre><p><strong>Example 2:</strong></p>
-<pre><strong>Input:</strong> s = "God Ding"
-<strong>Output:</strong> "doG gniD"
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+## Easy
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>
-	<li><code>s</code> contains printable <strong>ASCII</strong> characters.</li>
-	<li><code>s</code> does not contain any leading or trailing spaces.</li>
-	<li>There is <strong>at least one</strong> word in <code>s</code>.</li>
-	<li>All the words in <code>s</code> are separated by a single space.</li>
-</ul>
-</div>
+
+
+Given a string `s`, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: s = "Let's take LeetCode contest"
+<strong>Output:
+</strong> "s'teL ekat edoCteeL tsetnoc"
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s = "God Ding"
+<strong>Output:
+</strong> "doG gniD"
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 5 * 104`
+* `s` contains printable **ASCII** characters.
+* `s` does not contain any leading or trailing spaces.
+* There is **at least one** word in `s`.
+* All the words in `s` are separated by a single space.

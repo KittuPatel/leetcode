@@ -1,22 +1,35 @@
-<h2><a href="https://leetcode.com/problems/sort-transformed-array/">360. Sort Transformed Array</a></h2><h3>Medium</h3><hr><div><p>Given a <strong>sorted</strong> integer array <code>nums</code> and three integers <code>a</code>, <code>b</code> and <code>c</code>, apply a quadratic function of the form <code>f(x) = ax<sup>2</sup> + bx + c</code> to each element <code>nums[i]</code> in the array, and return <em>the array in a sorted order</em>.</p>
+# 360. Sort Transformed Array
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> nums = [-4,-2,2,4], a = 1, b = 3, c = 5
-<strong>Output:</strong> [3,9,15,33]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> nums = [-4,-2,2,4], a = -1, b = 3, c = 5
-<strong>Output:</strong> [-23,-5,1,7]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+## Medium
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 200</code></li>
-	<li><code>-100 &lt;= nums[i], a, b, c &lt;= 100</code></li>
-	<li><code>nums</code> is sorted in <strong>ascending</strong> order.</li>
-</ul>
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> Could you solve it in <code>O(n)</code> time?</p>
-</div>
+
+Given a **sorted** integer array `nums` and three integers `a`, `b` and `c`, apply a quadratic function of the form `f(x) = ax2 + bx + c` to each element `nums[i]` in the array, and return _the array in a sorted order_.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: nums = [-4,-2,2,4], a = 1, b = 3, c = 5
+<strong>Output:
+</strong> [3,9,15,33]
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: nums = [-4,-2,2,4], a = -1, b = 3, c = 5
+<strong>Output:
+</strong> [-23,-5,1,7]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= nums.length <= 200`
+* `-100 <= nums[i], a, b, c <= 100`
+* `nums` is sorted in **ascending** order.
+
+&#x20;
+
+**Follow up:** Could you solve it in `O(n)` time?

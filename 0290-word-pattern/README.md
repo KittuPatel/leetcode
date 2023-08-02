@@ -1,35 +1,40 @@
-<h2><a href="https://leetcode.com/problems/word-pattern/">290. Word Pattern</a></h2><h3>Easy</h3><hr><div><p>Given a <code>pattern</code> and a string <code>s</code>, find if <code>s</code>&nbsp;follows the same pattern.</p>
+# 290. Word Pattern
 
-<p>Here <b>follow</b> means a full match, such that there is a bijection between a letter in <code>pattern</code> and a <b>non-empty</b> word in <code>s</code>.</p>
+## Easy
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> pattern = "abba", s = "dog cat cat dog"
-<strong>Output:</strong> true
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Given a `pattern` and a string `s`, find if `s` follows the same pattern.
 
-<pre><strong>Input:</strong> pattern = "abba", s = "dog cat cat fish"
-<strong>Output:</strong> false
-</pre>
+Here follow means a full match, such that there is a bijection between a letter in `pattern` and a non-empty word in `s`.
 
-<p><strong class="example">Example 3:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> pattern = "aaaa", s = "dog cat cat dog"
-<strong>Output:</strong> false
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code><strong>Input: pattern = "abba", s = "dog cat cat dog"
+</strong><strong>Output: true
+</strong></code></pre>
 
-<ul>
-	<li><code>1 &lt;= pattern.length &lt;= 300</code></li>
-	<li><code>pattern</code> contains only lower-case English letters.</li>
-	<li><code>1 &lt;= s.length &lt;= 3000</code></li>
-	<li><code>s</code> contains only lowercase English letters and spaces <code>' '</code>.</li>
-	<li><code>s</code> <strong>does not contain</strong> any leading or trailing spaces.</li>
-	<li>All the words in <code>s</code> are separated by a <strong>single space</strong>.</li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code><strong>Input: pattern = "abba", s = "dog cat cat fish"
+</strong><strong>Output: false
+</strong></code></pre>
+
+**Example 3:**
+
+<pre><code><strong>Input: pattern = "aaaa", s = "dog cat cat dog"
+</strong><strong>Output: false
+</strong></code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= pattern.length <= 300`
+* `pattern` contains only lower-case English letters.
+* `1 <= s.length <= 3000`
+* `s` contains only lowercase English letters and spaces `' '`.
+* `s` **does not contain** any leading or trailing spaces.
+* All the words in `s` are separated by a **single space**.

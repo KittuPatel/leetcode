@@ -1,42 +1,54 @@
-<h2><a href="https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/">1828. Queries on Number of Points Inside a Circle</a></h2><h3>Medium</h3><hr><div><p>You are given an array <code>points</code> where <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> is the coordinates of the <code>i<sup>th</sup></code> point on a 2D plane. Multiple points can have the <strong>same</strong> coordinates.</p>
+# 1828. Queries on Number of Points Inside a Circle
 
-<p>You are also given an array <code>queries</code> where <code>queries[j] = [x<sub>j</sub>, y<sub>j</sub>, r<sub>j</sub>]</code> describes a circle centered at <code>(x<sub>j</sub>, y<sub>j</sub>)</code> with a radius of <code>r<sub>j</sub></code>.</p>
+## Medium
 
-<p>For each query <code>queries[j]</code>, compute the number of points <strong>inside</strong> the <code>j<sup>th</sup></code> circle. Points <strong>on the border</strong> of the circle are considered <strong>inside</strong>.</p>
 
-<p>Return <em>an array </em><code>answer</code><em>, where </em><code>answer[j]</code><em> is the answer to the </em><code>j<sup>th</sup></code><em> query</em>.</p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/25/chrome_2021-03-25_22-34-16.png" style="width: 500px; height: 418px;">
-<pre><strong>Input:</strong> points = [[1,3],[3,3],[5,3],[2,2]], queries = [[2,3,1],[4,3,1],[1,1,2]]
-<strong>Output:</strong> [3,2,2]
-<b>Explanation: </b>The points and circles are shown above.
+You are given an array `points` where `points[i] = [xi, yi]` is the coordinates of the `ith` point on a 2D plane. Multiple points can have the **same** coordinates.
+
+You are also given an array `queries` where `queries[j] = [xj, yj, rj]` describes a circle centered at `(xj, yj)` with a radius of `rj`.
+
+For each query `queries[j]`, compute the number of points **inside** the `jth` circle. Points **on the border** of the circle are considered **inside**.
+
+Return _an array_ `answer`_, where_ `answer[j]` _is the answer to the_ `jth` _query_.
+
+&#x20;
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2021/03/25/chrome\_2021-03-25\_22-34-16.png)
+
+<pre><code>Input: points = [[1,3],[3,3],[5,3],[2,2]], queries = [[2,3,1],[4,3,1],[1,1,2]]
+<strong>Output:
+</strong> [3,2,2]
+Explanation: The points and circles are shown above.
 queries[0] is the green circle, queries[1] is the red circle, and queries[2] is the blue circle.
-</pre>
+</code></pre>
 
-<p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/25/chrome_2021-03-25_22-42-07.png" style="width: 500px; height: 390px;">
-<pre><strong>Input:</strong> points = [[1,1],[2,2],[3,3],[4,4],[5,5]], queries = [[1,2,2],[2,2,2],[4,3,2],[4,3,3]]
-<strong>Output:</strong> [2,3,2,4]
-<b>Explanation: </b>The points and circles are shown above.
+**Example 2:**
+
+![](https://assets.leetcode.com/uploads/2021/03/25/chrome\_2021-03-25\_22-42-07.png)
+
+<pre><code>Input: points = [[1,1],[2,2],[3,3],[4,4],[5,5]], queries = [[1,2,2],[2,2,2],[4,3,2],[4,3,3]]
+<strong>Output:
+</strong> [2,3,2,4]
+Explanation: The points and circles are shown above.
 queries[0] is green, queries[1] is red, queries[2] is blue, and queries[3] is purple.
-</pre>
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= points.length &lt;= 500</code></li>
-	<li><code>points[i].length == 2</code></li>
-	<li><code>0 &lt;= x<sub>​​​​​​i</sub>, y<sub>​​​​​​i</sub> &lt;= 500</code></li>
-	<li><code>1 &lt;= queries.length &lt;= 500</code></li>
-	<li><code>queries[j].length == 3</code></li>
-	<li><code>0 &lt;= x<sub>j</sub>, y<sub>j</sub> &lt;= 500</code></li>
-	<li><code>1 &lt;= r<sub>j</sub> &lt;= 500</code></li>
-	<li>All coordinates are integers.</li>
-</ul>
+**Constraints:**
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> Could you find the answer for each query in better complexity than <code>O(n)</code>?</p>
-</div>
+* `1 <= points.length <= 500`
+* `points[i].length == 2`
+* `0 <= x​​​​​​i, y​​​​​​i <= 500`
+* `1 <= queries.length <= 500`
+* `queries[j].length == 3`
+* `0 <= xj, yj <= 500`
+* `1 <= rj <= 500`
+* All coordinates are integers.
+
+&#x20;
+
+**Follow up:** Could you find the answer for each query in better complexity than `O(n)`?

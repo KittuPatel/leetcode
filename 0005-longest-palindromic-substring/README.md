@@ -1,26 +1,34 @@
-<h2><a href="https://leetcode.com/problems/longest-palindromic-substring/">5. Longest Palindromic Substring</a></h2><h3>Medium</h3><hr><div><p>Given a string <code>s</code>, return <em>the longest palindromic substring</em> in <code>s</code>.</p>
+# 5. Longest Palindromic Substring
 
-<p>A string is called a palindrome string if the reverse of that string is the same as the original string.</p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> s = "babad"
-<strong>Output:</strong> "bab"
-<strong>Explanation:</strong> "aba" is also a valid answer.
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Given a string `s`, return _the longest palindromic substring_ in `s`.
 
-<pre><strong>Input:</strong> s = "cbbd"
-<strong>Output:</strong> "bb"
-</pre>
+A string is called a palindrome string if the reverse of that string is the same as the original string.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 1000</code></li>
-	<li><code>s</code> consist of only digits and English letters.</li>
-</ul>
-</div>
+**Example 1:**
+
+<pre><code>Input: s = "babad"
+<strong>Output:
+</strong> "bab"
+<strong>Explanation:
+</strong> "aba" is also a valid answer.
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s = "cbbd"
+<strong>Output:
+</strong> "bb"
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 1000`
+* `s` consist of only digits and English letters.

@@ -1,26 +1,34 @@
-<h2><a href="https://leetcode.com/problems/permutation-in-string/">567. Permutation in String</a></h2><h3>Medium</h3><hr><div><p>Given two strings <code>s1</code> and <code>s2</code>, return <code>true</code><em> if </em><code>s2</code><em> contains a permutation of </em><code>s1</code><em>, or </em><code>false</code><em> otherwise</em>.</p>
+# 567. Permutation in String
 
-<p>In other words, return <code>true</code> if one of <code>s1</code>'s permutations is the substring of <code>s2</code>.</p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
 
-<pre><strong>Input:</strong> s1 = "ab", s2 = "eidbaooo"
-<strong>Output:</strong> true
-<strong>Explanation:</strong> s2 contains one permutation of s1 ("ba").
-</pre>
 
-<p><strong>Example 2:</strong></p>
+Given two strings `s1` and `s2`, return `true` _if_ `s2` _contains a permutation of_ `s1`_, or_ `false` _otherwise_.
 
-<pre><strong>Input:</strong> s1 = "ab", s2 = "eidboaoo"
-<strong>Output:</strong> false
-</pre>
+In other words, return `true` if one of `s1`'s permutations is the substring of `s2`.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= s1.length, s2.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s1</code> and <code>s2</code> consist of lowercase English letters.</li>
-</ul>
-</div>
+**Example 1:**
+
+<pre><code>Input: s1 = "ab", s2 = "eidbaooo"
+<strong>Output:
+</strong> true
+<strong>Explanation:
+</strong> s2 contains one permutation of s1 ("ba").
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s1 = "ab", s2 = "eidboaoo"
+<strong>Output:
+</strong> false
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s1.length, s2.length <= 104`
+* `s1` and `s2` consist of lowercase English letters.

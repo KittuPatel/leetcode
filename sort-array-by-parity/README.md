@@ -1,26 +1,32 @@
-<h2>  Sort Array By Parity</h2><hr><div><p>Given an integer array <code>nums</code>, move all the even integers at the beginning of the array followed by all the odd integers.</p>
+# Sort Array By Parity
 
-<p>Return <em><strong>any array</strong> that satisfies this condition</em>.</p>
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [3,1,2,4]
-<strong>Output:</strong> [2,4,3,1]
-<strong>Explanation:</strong> The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
-</pre>
+Given an integer array `nums`, move all the even integers at the beginning of the array followed by all the odd integers.
 
-<p><strong>Example 2:</strong></p>
+Return _**any array** that satisfies this condition_.
 
-<pre><strong>Input:</strong> nums = [0]
-<strong>Output:</strong> [0]
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 5000</code></li>
-	<li><code>0 &lt;= nums[i] &lt;= 5000</code></li>
-</ul>
-</div>
+<pre><code>Input: nums = [3,1,2,4]
+<strong>Output:
+</strong> [2,4,3,1]
+<strong>Explanation:
+</strong> The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: nums = [0]
+<strong>Output:
+</strong> [0]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= nums.length <= 5000`
+* `0 <= nums[i] <= 5000`

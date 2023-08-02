@@ -1,37 +1,43 @@
-<h2><a href="https://leetcode.com/problems/valid-parentheses/">20. Valid Parentheses</a></h2><h3>Easy</h3><hr><div><p>Given a string <code>s</code> containing just the characters <code>'('</code>, <code>')'</code>, <code>'{'</code>, <code>'}'</code>, <code>'['</code> and <code>']'</code>, determine if the input string is valid.</p>
+# 20. Valid Parentheses
 
-<p>An input string is valid if:</p>
+## Easy
 
-<ol>
-	<li>Open brackets must be closed by the same type of brackets.</li>
-	<li>Open brackets must be closed in the correct order.</li>
-	<li>Every close bracket has a corresponding open bracket of the same type.</li>
-</ol>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> s = "()"
-<strong>Output:</strong> true
-</pre>
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 
-<p><strong class="example">Example 2:</strong></p>
+An input string is valid if:
 
-<pre><strong>Input:</strong> s = "()[]{}"
-<strong>Output:</strong> true
-</pre>
+1. Open brackets must be closed by the same type of brackets.
+2. Open brackets must be closed in the correct order.
+3. Every close bracket has a corresponding open bracket of the same type.
 
-<p><strong class="example">Example 3:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> s = "(]"
-<strong>Output:</strong> false
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: s = "()"
+<strong>Output:
+</strong> true
+</code></pre>
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of parentheses only <code>'()[]{}'</code>.</li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: s = "()[]{}"
+<strong>Output:
+</strong> true
+</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: s = "(]"
+<strong>Output:
+</strong> false
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 104`
+* `s` consists of parentheses only `'()[]{}'`.

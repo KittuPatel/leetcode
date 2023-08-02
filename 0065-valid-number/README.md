@@ -1,58 +1,57 @@
-<h2><a href="https://leetcode.com/problems/valid-number/">65. Valid Number</a></h2><h3>Hard</h3><hr><div><p>A <strong>valid number</strong> can be split up into these components (in order):</p>
+# 65. Valid Number
 
-<ol>
-	<li>A <strong>decimal number</strong> or an <strong>integer</strong>.</li>
-	<li>(Optional) An <code>'e'</code> or <code>'E'</code>, followed by an <strong>integer</strong>.</li>
-</ol>
+## Hard
 
-<p>A <strong>decimal number</strong> can be split up into these components (in order):</p>
 
-<ol>
-	<li>(Optional) A sign character (either <code>'+'</code> or <code>'-'</code>).</li>
-	<li>One of the following formats:
-	<ol>
-		<li>One or more digits, followed by a dot <code>'.'</code>.</li>
-		<li>One or more digits, followed by a dot <code>'.'</code>, followed by one or more digits.</li>
-		<li>A dot <code>'.'</code>, followed by one or more digits.</li>
-	</ol>
-	</li>
-</ol>
 
-<p>An <strong>integer</strong> can be split up into these components (in order):</p>
+A **valid number** can be split up into these components (in order):
 
-<ol>
-	<li>(Optional) A sign character (either <code>'+'</code> or <code>'-'</code>).</li>
-	<li>One or more digits.</li>
-</ol>
+1. A **decimal number** or an **integer**.
+2. (Optional) An `'e'` or `'E'`, followed by an **integer**.
 
-<p>For example, all the following are valid numbers: <code>["2", "0089", "-0.1", "+3.14", "4.", "-.9", "2e10", "-90E3", "3e+7", "+6e-1", "53.5e93", "-123.456e789"]</code>, while the following are not valid numbers: <code>["abc", "1a", "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]</code>.</p>
+A **decimal number** can be split up into these components (in order):
 
-<p>Given a string <code>s</code>, return <code>true</code><em> if </em><code>s</code><em> is a <strong>valid number</strong></em>.</p>
+1. (Optional) A sign character (either `'+'` or `'-'`).
+2. One of the following formats:
+   1. One or more digits, followed by a dot `'.'`.
+   2. One or more digits, followed by a dot `'.'`, followed by one or more digits.
+   3. A dot `'.'`, followed by one or more digits.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+An **integer** can be split up into these components (in order):
 
-<pre><strong>Input:</strong> s = "0"
-<strong>Output:</strong> true
-</pre>
+1. (Optional) A sign character (either `'+'` or `'-'`).
+2. One or more digits.
 
-<p><strong class="example">Example 2:</strong></p>
+For example, all the following are valid numbers: `["2", "0089", "-0.1", "+3.14", "4.", "-.9", "2e10", "-90E3", "3e+7", "+6e-1", "53.5e93", "-123.456e789"]`, while the following are not valid numbers: `["abc", "1a", "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]`.
 
-<pre><strong>Input:</strong> s = "e"
-<strong>Output:</strong> false
-</pre>
+Given a string `s`, return `true` _if_ `s` _is a **valid number**_.
 
-<p><strong class="example">Example 3:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> s = "."
-<strong>Output:</strong> false
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: s = "0"
+<strong>Output:
+</strong> true
+</code></pre>
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 20</code></li>
-	<li><code>s</code> consists of only English letters (both uppercase and lowercase), digits (<code>0-9</code>), plus <code>'+'</code>, minus <code>'-'</code>, or dot <code>'.'</code>.</li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: s = "e"
+<strong>Output:
+</strong> false
+</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: s = "."
+<strong>Output:
+</strong> false
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 20`
+* `s` consists of only English letters (both uppercase and lowercase), digits (`0-9`), plus `'+'`, minus `'-'`, or dot `'.'`.

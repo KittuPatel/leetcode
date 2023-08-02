@@ -1,24 +1,34 @@
-<h2><a href="https://leetcode.com/problems/rotate-string/">796. Rotate String</a></h2><h3>Easy</h3><hr><div><p>Given two strings <code>s</code> and <code>goal</code>, return <code>true</code> <em>if and only if</em> <code>s</code> <em>can become</em> <code>goal</code> <em>after some number of <strong>shifts</strong> on</em> <code>s</code>.</p>
+# 796. Rotate String
 
-<p>A <strong>shift</strong> on <code>s</code> consists of moving the leftmost character of <code>s</code> to the rightmost position.</p>
+## Easy
 
-<ul>
-	<li>For example, if <code>s = "abcde"</code>, then it will be <code>"bcdea"</code> after one shift.</li>
-</ul>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> s = "abcde", goal = "cdeab"
-<strong>Output:</strong> true
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> s = "abcde", goal = "abced"
-<strong>Output:</strong> false
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
 
-<ul>
-	<li><code>1 &lt;= s.length, goal.length &lt;= 100</code></li>
-	<li><code>s</code> and <code>goal</code> consist of lowercase English letters.</li>
-</ul>
-</div>
+Given two strings `s` and `goal`, return `true` _if and only if_ `s` _can become_ `goal` _after some number of **shifts** on_ `s`.
+
+A **shift** on `s` consists of moving the leftmost character of `s` to the rightmost position.
+
+* For example, if `s = "abcde"`, then it will be `"bcdea"` after one shift.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: s = "abcde", goal = "cdeab"
+<strong>Output:
+</strong> true
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s = "abcde", goal = "abced"
+<strong>Output:
+</strong> false
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length, goal.length <= 100`
+* `s` and `goal` consist of lowercase English letters.

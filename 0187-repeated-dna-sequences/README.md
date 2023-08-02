@@ -1,26 +1,36 @@
-<h2><a href="https://leetcode.com/problems/repeated-dna-sequences/">187. Repeated DNA Sequences</a></h2><h3>Medium</h3><hr><div><p>The <strong>DNA sequence</strong> is composed of a series of nucleotides abbreviated as <code>'A'</code>, <code>'C'</code>, <code>'G'</code>, and <code>'T'</code>.</p>
+# 187. Repeated DNA Sequences
 
-<ul>
-	<li>For example, <code>"ACGAATTCCG"</code> is a <strong>DNA sequence</strong>.</li>
-</ul>
+## Medium
 
-<p>When studying <strong>DNA</strong>, it is useful to identify repeated sequences within the DNA.</p>
 
-<p>Given a string <code>s</code> that represents a <strong>DNA sequence</strong>, return all the <strong><code>10</code>-letter-long</strong> sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in <strong>any order</strong>.</p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
-<strong>Output:</strong> ["AAAAACCCCC","CCCCCAAAAA"]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> s = "AAAAAAAAAAAAA"
-<strong>Output:</strong> ["AAAAAAAAAA"]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+The **DNA sequence** is composed of a series of nucleotides abbreviated as `'A'`, `'C'`, `'G'`, and `'T'`.
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>s[i]</code> is either <code>'A'</code>, <code>'C'</code>, <code>'G'</code>, or <code>'T'</code>.</li>
-</ul>
-</div>
+* For example, `"ACGAATTCCG"` is a **DNA sequence**.
+
+When studying **DNA**, it is useful to identify repeated sequences within the DNA.
+
+Given a string `s` that represents a **DNA sequence**, return all the **`10`-letter-long** sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in **any order**.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+<strong>Output:
+</strong> ["AAAAACCCCC","CCCCCAAAAA"]
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s = "AAAAAAAAAAAAA"
+<strong>Output:
+</strong> ["AAAAAAAAAA"]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 105`
+* `s[i]` is either `'A'`, `'C'`, `'G'`, or `'T'`.

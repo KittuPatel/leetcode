@@ -1,29 +1,33 @@
-<h2><a href="https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/">381. Insert Delete GetRandom O(1) - Duplicates allowed</a></h2><h3>Hard</h3><hr><div><p><code>RandomizedCollection</code> is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and also removing a random element.</p>
+# 381. Insert Delete GetRandom O(1) - Duplicates allowed
 
-<p>Implement the <code>RandomizedCollection</code> class:</p>
+## Hard
 
-<ul>
-	<li><code>RandomizedCollection()</code> Initializes the empty <code>RandomizedCollection</code> object.</li>
-	<li><code>bool insert(int val)</code> Inserts an item <code>val</code> into the multiset, even if the item is already present. Returns <code>true</code> if the item is not present, <code>false</code> otherwise.</li>
-	<li><code>bool remove(int val)</code> Removes an item <code>val</code> from the multiset if present. Returns <code>true</code> if the item is present, <code>false</code> otherwise. Note that if <code>val</code> has multiple occurrences in the multiset, we only remove one of them.</li>
-	<li><code>int getRandom()</code> Returns a random element from the current multiset of elements. The probability of each element being returned is <strong>linearly related</strong> to the number of same values the multiset contains.</li>
-</ul>
 
-<p>You must implement the functions of the class such that each function works on <strong>average</strong> <code>O(1)</code> time complexity.</p>
 
-<p><strong>Note:</strong> The test cases are generated such that <code>getRandom</code> will only be called if there is <strong>at least one</strong> item in the <code>RandomizedCollection</code>.</p>
+`RandomizedCollection` is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and also removing a random element.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+Implement the `RandomizedCollection` class:
 
-<pre><strong>Input</strong>
+* `RandomizedCollection()` Initializes the empty `RandomizedCollection` object.
+* `bool insert(int val)` Inserts an item `val` into the multiset, even if the item is already present. Returns `true` if the item is not present, `false` otherwise.
+* `bool remove(int val)` Removes an item `val` from the multiset if present. Returns `true` if the item is present, `false` otherwise. Note that if `val` has multiple occurrences in the multiset, we only remove one of them.
+* `int getRandom()` Returns a random element from the current multiset of elements. The probability of each element being returned is **linearly related** to the number of same values the multiset contains.
+
+You must implement the functions of the class such that each function works on **average** `O(1)` time complexity.
+
+**Note:** The test cases are generated such that `getRandom` will only be called if there is **at least one** item in the `RandomizedCollection`.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input
 ["RandomizedCollection", "insert", "insert", "insert", "getRandom", "remove", "getRandom"]
 [[], [1], [1], [2], [], [1], []]
-<strong>Output</strong>
-[null, true, false, true, 2, true, 1]
-
-<strong>Explanation</strong>
-RandomizedCollection randomizedCollection = new RandomizedCollection();
+<strong>Output
+</strong>[null, true, false, true, 2, true, 1]
+<strong>Explanation
+</strong>RandomizedCollection randomizedCollection = new RandomizedCollection();
 randomizedCollection.insert(1);   // return true since the collection does not contain 1.
                                   // Inserts 1 into the collection.
 randomizedCollection.insert(1);   // return false since the collection contains 1.
@@ -36,14 +40,12 @@ randomizedCollection.getRandom(); // getRandom should:
 randomizedCollection.remove(1);   // return true since the collection contains 1.
                                   // Removes 1 from the collection. Collection now contains [1,2].
 randomizedCollection.getRandom(); // getRandom should return 1 or 2, both equally likely.
-</pre>
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>-2<sup>31</sup> &lt;= val &lt;= 2<sup>31</sup> - 1</code></li>
-	<li>At most <code>2 * 10<sup>5</sup></code> calls <strong>in total</strong> will be made to <code>insert</code>, <code>remove</code>, and <code>getRandom</code>.</li>
-	<li>There will be <strong>at least one</strong> element in the data structure when <code>getRandom</code> is called.</li>
-</ul>
-</div>
+**Constraints:**
+
+* `-231 <= val <= 231 - 1`
+* At most `2 * 105` calls **in total** will be made to `insert`, `remove`, and `getRandom`.
+* There will be **at least one** element in the data structure when `getRandom` is called.

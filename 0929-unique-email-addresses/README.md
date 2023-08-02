@@ -1,49 +1,48 @@
-<h2><a href="https://leetcode.com/problems/unique-email-addresses/">929. Unique Email Addresses</a></h2><h3>Easy</h3><hr><div><p>Every <strong>valid email</strong> consists of a <strong>local name</strong> and a <strong>domain name</strong>, separated by the <code>'@'</code> sign. Besides lowercase letters, the email may contain one or more <code>'.'</code> or <code>'+'</code>.</p>
+# 929. Unique Email Addresses
 
-<ul>
-	<li>For example, in <code>"alice@leetcode.com"</code>, <code>"alice"</code> is the <strong>local name</strong>, and <code>"leetcode.com"</code> is the <strong>domain name</strong>.</li>
-</ul>
+## Easy
 
-<p>If you add periods <code>'.'</code> between some characters in the <strong>local name</strong> part of an email address, mail sent there will be forwarded to the same address without dots in the local name. Note that this rule <strong>does not apply</strong> to <strong>domain names</strong>.</p>
 
-<ul>
-	<li>For example, <code>"alice.z@leetcode.com"</code> and <code>"alicez@leetcode.com"</code> forward to the same email address.</li>
-</ul>
 
-<p>If you add a plus <code>'+'</code> in the <strong>local name</strong>, everything after the first plus sign <strong>will be ignored</strong>. This allows certain emails to be filtered. Note that this rule <strong>does not apply</strong> to <strong>domain names</strong>.</p>
+Every **valid email** consists of a **local name** and a **domain name**, separated by the `'@'` sign. Besides lowercase letters, the email may contain one or more `'.'` or `'+'`.
 
-<ul>
-	<li>For example, <code>"m.y+name@email.com"</code> will be forwarded to <code>"my@email.com"</code>.</li>
-</ul>
+* For example, in `"alice@leetcode.com"`, `"alice"` is the **local name**, and `"leetcode.com"` is the **domain name**.
 
-<p>It is possible to use both of these rules at the same time.</p>
+If you add periods `'.'` between some characters in the **local name** part of an email address, mail sent there will be forwarded to the same address without dots in the local name. Note that this rule **does not apply** to **domain names**.
 
-<p>Given an array of strings <code>emails</code> where we send one email to each <code>emails[i]</code>, return <em>the number of different addresses that actually receive mails</em>.</p>
+* For example, `"alice.z@leetcode.com"` and `"alicez@leetcode.com"` forward to the same email address.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+If you add a plus `'+'` in the **local name**, everything after the first plus sign **will be ignored**. This allows certain emails to be filtered. Note that this rule **does not apply** to **domain names**.
 
-<pre><strong>Input:</strong> emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails.
-</pre>
+* For example, `"m.y+name@email.com"` will be forwarded to `"my@email.com"`.
 
-<p><strong class="example">Example 2:</strong></p>
+It is possible to use both of these rules at the same time.
 
-<pre><strong>Input:</strong> emails = ["a@leetcode.com","b@leetcode.com","c@leetcode.com"]
-<strong>Output:</strong> 3
-</pre>
+Given an array of strings `emails` where we send one email to each `emails[i]`, return _the number of different addresses that actually receive mails_.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= emails.length &lt;= 100</code></li>
-	<li><code>1 &lt;= emails[i].length &lt;= 100</code></li>
-	<li><code>emails[i]</code> consist of lowercase English letters, <code>'+'</code>, <code>'.'</code> and <code>'@'</code>.</li>
-	<li>Each <code>emails[i]</code> contains exactly one <code>'@'</code> character.</li>
-	<li>All local and domain names are non-empty.</li>
-	<li>Local names do not start with a <code>'+'</code> character.</li>
-	<li>Domain names end with the <code>".com"</code> suffix.</li>
-</ul>
-</div>
+**Example 1:**
+
+<pre><code><strong>Input: emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+</strong><strong>Output: 2
+</strong><strong>Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails.
+</strong></code></pre>
+
+**Example 2:**
+
+<pre><code><strong>Input: emails = ["a@leetcode.com","b@leetcode.com","c@leetcode.com"]
+</strong><strong>Output: 3
+</strong></code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= emails.length <= 100`
+* `1 <= emails[i].length <= 100`
+* `emails[i]` consist of lowercase English letters, `'+'`, `'.'` and `'@'`.
+* Each `emails[i]` contains exactly one `'@'` character.
+* All local and domain names are non-empty.
+* Local names do not start with a `'+'` character.
+* Domain names end with the `".com"` suffix.

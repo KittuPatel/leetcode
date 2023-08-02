@@ -1,40 +1,49 @@
-<h2><a href="https://leetcode.com/problems/print-binary-tree/">655. Print Binary Tree</a></h2><h3>Medium</h3><hr><div><p>Given the <code>root</code> of a binary tree, construct a <strong>0-indexed</strong> <code>m x n</code> string matrix <code>res</code> that represents a <strong>formatted layout</strong> of the tree. The formatted layout matrix should be constructed using the following rules:</p>
+# 655. Print Binary Tree
 
-<ul>
-	<li>The <strong>height</strong> of the tree is <code>height</code>&nbsp;and the number of rows <code>m</code> should be equal to <code>height + 1</code>.</li>
-	<li>The number of columns <code>n</code> should be equal to <code>2<sup>height+1</sup> - 1</code>.</li>
-	<li>Place the <strong>root node</strong> in the <strong>middle</strong> of the <strong>top row</strong> (more formally, at location <code>res[0][(n-1)/2]</code>).</li>
-	<li>For each node that has been placed in the matrix at position <code>res[r][c]</code>, place its <strong>left child</strong> at <code>res[r+1][c-2<sup>height-r-1</sup>]</code> and its <strong>right child</strong> at <code>res[r+1][c+2<sup>height-r-1</sup>]</code>.</li>
-	<li>Continue this process until all the nodes in the tree have been placed.</li>
-	<li>Any empty cells should contain the empty string <code>""</code>.</li>
-</ul>
+## Medium
 
-<p>Return <em>the constructed matrix </em><code>res</code>.</p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/05/03/print1-tree.jpg" style="width: 141px; height: 181px;">
-<pre><strong>Input:</strong> root = [1,2]
-<strong>Output:</strong> 
+
+Given the `root` of a binary tree, construct a **0-indexed** `m x n` string matrix `res` that represents a **formatted layout** of the tree. The formatted layout matrix should be constructed using the following rules:
+
+* The **height** of the tree is `height` and the number of rows `m` should be equal to `height + 1`.
+* The number of columns `n` should be equal to `2height+1 - 1`.
+* Place the **root node** in the **middle** of the **top row** (more formally, at location `res[0][(n-1)/2]`).
+* For each node that has been placed in the matrix at position `res[r][c]`, place its **left child** at `res[r+1][c-2height-r-1]` and its **right child** at `res[r+1][c+2height-r-1]`.
+* Continue this process until all the nodes in the tree have been placed.
+* Any empty cells should contain the empty string `""`.
+
+Return _the constructed matrix_ `res`.
+
+&#x20;
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2021/05/03/print1-tree.jpg)
+
+<pre><code>Input: root = [1,2]
+<strong>Output:
+</strong> 
 [["","1",""],
-&nbsp;["2","",""]]
-</pre>
+ ["2","",""]]
+</code></pre>
 
-<p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/05/03/print2-tree.jpg" style="width: 207px; height: 302px;">
-<pre><strong>Input:</strong> root = [1,2,3,null,4]
-<strong>Output:</strong> 
+**Example 2:**
+
+![](https://assets.leetcode.com/uploads/2021/05/03/print2-tree.jpg)
+
+<pre><code>Input: root = [1,2,3,null,4]
+<strong>Output:
+</strong> 
 [["","","","1","","",""],
-&nbsp;["","2","","","","3",""],
-&nbsp;["","","4","","","",""]]
-</pre>
+ ["","2","","","","3",""],
+ ["","","4","","","",""]]
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li>The number of nodes in the tree is in the range <code>[1, 2<sup>10</sup>]</code>.</li>
-	<li><code>-99 &lt;= Node.val &lt;= 99</code></li>
-	<li>The depth of the tree will be in the range <code>[1, 10]</code>.</li>
-</ul>
-</div>
+**Constraints:**
+
+* The number of nodes in the tree is in the range `[1, 210]`.
+* `-99 <= Node.val <= 99`
+* The depth of the tree will be in the range `[1, 10]`.

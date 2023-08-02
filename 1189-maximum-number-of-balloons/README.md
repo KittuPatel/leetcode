@@ -1,35 +1,40 @@
-<h2><a href="https://leetcode.com/problems/maximum-number-of-balloons/">1189. Maximum Number of Balloons</a></h2><h3>Easy</h3><hr><div><p>Given a string <code>text</code>, you want to use the characters of <code>text</code> to form as many instances of the word <strong>"balloon"</strong> as possible.</p>
+# 1189. Maximum Number of Balloons
 
-<p>You can use each character in <code>text</code> <strong>at most once</strong>. Return the maximum number of instances that can be formed.</p>
+## Easy
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
 
-<p><strong><img alt="" src="https://assets.leetcode.com/uploads/2019/09/05/1536_ex1_upd.JPG" style="width: 132px; height: 35px;"></strong></p>
 
-<pre><strong>Input:</strong> text = "nlaebolko"
-<strong>Output:</strong> 1
-</pre>
+Given a string `text`, you want to use the characters of `text` to form as many instances of the word **"balloon"** as possible.
 
-<p><strong class="example">Example 2:</strong></p>
+You can use each character in `text` **at most once**. Return the maximum number of instances that can be formed.
 
-<p><strong><img alt="" src="https://assets.leetcode.com/uploads/2019/09/05/1536_ex2_upd.JPG" style="width: 267px; height: 35px;"></strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> text = "loonbalxballpoon"
-<strong>Output:</strong> 2
-</pre>
+**Example 1:**
 
-<p><strong class="example">Example 3:</strong></p>
+![](https://assets.leetcode.com/uploads/2019/09/05/1536\_ex1\_upd.JPG)
 
-<pre><strong>Input:</strong> text = "leetcode"
-<strong>Output:</strong> 0
-</pre>
+<pre><code><strong>Input: text = "nlaebolko"
+</strong><strong>Output: 1
+</strong></code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= text.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>text</code> consists of lower case English letters only.</li>
-</ul>
-</div>
+![](https://assets.leetcode.com/uploads/2019/09/05/1536\_ex2\_upd.JPG)
+
+<pre><code><strong>Input: text = "loonbalxballpoon"
+</strong><strong>Output: 2
+</strong></code></pre>
+
+**Example 3:**
+
+<pre><code><strong>Input: text = "leetcode"
+</strong><strong>Output: 0
+</strong></code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= text.length <= 104`
+* `text` consists of lower case English letters only.

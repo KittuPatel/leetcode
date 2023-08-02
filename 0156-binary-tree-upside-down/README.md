@@ -1,41 +1,51 @@
-<h2><a href="https://leetcode.com/problems/binary-tree-upside-down/">156. Binary Tree Upside Down</a></h2><h3>Medium</h3><hr><div><p>Given the <code>root</code> of a binary tree, turn the tree upside down and return <em>the new root</em>.</p>
+# 156. Binary Tree Upside Down
 
-<p>You can turn a binary tree upside down with the following steps:</p>
+## Medium
 
-<ol>
-	<li>The original left child becomes the new root.</li>
-	<li>The original root becomes the new right child.</li>
-	<li>The original right child becomes the new left child.</li>
-</ol>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/08/29/main.jpg" style="width: 600px; height: 95px;">
-<p>The mentioned steps are done level by level. It is <strong>guaranteed</strong> that every right node has a sibling (a left node with the same parent) and has no children.</p>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/08/29/updown.jpg" style="width: 800px; height: 161px;">
-<pre><strong>Input:</strong> root = [1,2,3,4,5]
-<strong>Output:</strong> [4,5,2,null,null,3,1]
-</pre>
 
-<p><strong class="example">Example 2:</strong></p>
+Given the `root` of a binary tree, turn the tree upside down and return _the new root_.
 
-<pre><strong>Input:</strong> root = []
-<strong>Output:</strong> []
-</pre>
+You can turn a binary tree upside down with the following steps:
 
-<p><strong class="example">Example 3:</strong></p>
+1. The original left child becomes the new root.
+2. The original root becomes the new right child.
+3. The original right child becomes the new left child.
 
-<pre><strong>Input:</strong> root = [1]
-<strong>Output:</strong> [1]
-</pre>
+![](https://assets.leetcode.com/uploads/2020/08/29/main.jpg)
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+The mentioned steps are done level by level. It is **guaranteed** that every right node has a sibling (a left node with the same parent) and has no children.
 
-<ul>
-	<li>The number of nodes in the tree will be in the range <code>[0, 10]</code>.</li>
-	<li><code>1 &lt;= Node.val &lt;= 10</code></li>
-	<li>Every right node in the tree has a sibling (a left node that shares the same parent).</li>
-	<li>Every right node in the tree has no children.</li>
-</ul>
-</div>
+&#x20;
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/08/29/updown.jpg)
+
+<pre><code>Input: root = [1,2,3,4,5]
+<strong>Output:
+</strong> [4,5,2,null,null,3,1]
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: root = []
+<strong>Output:
+</strong> []
+</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: root = [1]
+<strong>Output:
+</strong> [1]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in the tree will be in the range `[0, 10]`.
+* `1 <= Node.val <= 10`
+* Every right node in the tree has a sibling (a left node that shares the same parent).
+* Every right node in the tree has no children.

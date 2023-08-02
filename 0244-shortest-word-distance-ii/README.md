@@ -1,36 +1,38 @@
-<h2><a href="https://leetcode.com/problems/shortest-word-distance-ii/">244. Shortest Word Distance II</a></h2><h3>Medium</h3><hr><div><p>Design a data structure that will be initialized with a string array, and then it should answer queries of the shortest distance between two different strings from the array.</p>
+# 244. Shortest Word Distance II
 
-<p>Implement the <code>WordDistance</code> class:</p>
+## Medium
 
-<ul>
-	<li><code>WordDistance(String[] wordsDict)</code> initializes the object with the strings array <code>wordsDict</code>.</li>
-	<li><code>int shortest(String word1, String word2)</code> returns the shortest distance between <code>word1</code> and <code>word2</code> in the array <code>wordsDict</code>.</li>
-</ul>
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input</strong>
+Design a data structure that will be initialized with a string array, and then it should answer queries of the shortest distance between two different strings from the array.
+
+Implement the `WordDistance` class:
+
+* `WordDistance(String[] wordsDict)` initializes the object with the strings array `wordsDict`.
+* `int shortest(String word1, String word2)` returns the shortest distance between `word1` and `word2` in the array `wordsDict`.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input
 ["WordDistance", "shortest", "shortest"]
 [[["practice", "makes", "perfect", "coding", "makes"]], ["coding", "practice"], ["makes", "coding"]]
-<strong>Output</strong>
-[null, 3, 1]
-
-<strong>Explanation</strong>
-WordDistance wordDistance = new WordDistance(["practice", "makes", "perfect", "coding", "makes"]);
+<strong>Output
+</strong>[null, 3, 1]
+<strong>Explanation
+</strong>WordDistance wordDistance = new WordDistance(["practice", "makes", "perfect", "coding", "makes"]);
 wordDistance.shortest("coding", "practice"); // return 3
 wordDistance.shortest("makes", "coding");    // return 1
-</pre>
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= wordsDict.length &lt;= 3 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= wordsDict[i].length &lt;= 10</code></li>
-	<li><code>wordsDict[i]</code> consists of lowercase English letters.</li>
-	<li><code>word1</code> and <code>word2</code> are in <code>wordsDict</code>.</li>
-	<li><code>word1 != word2</code></li>
-	<li>At most <code>5000</code> calls will be made to <code>shortest</code>.</li>
-</ul>
-</div>
+**Constraints:**
+
+* `1 <= wordsDict.length <= 3 * 104`
+* `1 <= wordsDict[i].length <= 10`
+* `wordsDict[i]` consists of lowercase English letters.
+* `word1` and `word2` are in `wordsDict`.
+* `word1 != word2`
+* At most `5000` calls will be made to `shortest`.

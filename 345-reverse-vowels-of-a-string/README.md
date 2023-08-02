@@ -1,20 +1,32 @@
-<h2><a href="https://leetcode.com/problems/reverse-vowels-of-a-string/">345. Reverse Vowels of a String</a></h2><h3>Easy</h3><hr><div><p>Given a string <code>s</code>, reverse only all the vowels in the string and return it.</p>
+# 345. Reverse Vowels of a String
 
-<p>The vowels are <code>'a'</code>, <code>'e'</code>, <code>'i'</code>, <code>'o'</code>, and <code>'u'</code>, and they can appear in both lower and upper cases, more than once.</p>
+## Easy
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong> s = "hello"
-<strong>Output:</strong> "holle"
-</pre><p><strong>Example 2:</strong></p>
-<pre><strong>Input:</strong> s = "leetcode"
-<strong>Output:</strong> "leotcede"
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>
-	<li><code>s</code> consist of <strong>printable ASCII</strong> characters.</li>
-</ul>
-</div>
+
+Given a string `s`, reverse only all the vowels in the string and return it.
+
+The vowels are `'a'`, `'e'`, `'i'`, `'o'`, and `'u'`, and they can appear in both lower and upper cases, more than once.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: s = "hello"
+<strong>Output:
+</strong> "holle"
+</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: s = "leetcode"
+<strong>Output:
+</strong> "leotcede"
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 3 * 105`
+* `s` consist of **printable ASCII** characters.

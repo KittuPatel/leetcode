@@ -1,27 +1,35 @@
-<h2><a href="https://leetcode.com/problems/valid-triangle-number/">611. Valid Triangle Number</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code>, return <em>the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle</em>.</p>
+# 611. Valid Triangle Number
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+## Medium
 
-<pre><strong>Input:</strong> nums = [2,2,3,4]
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> Valid combinations are: 
+
+
+Given an integer array `nums`, return _the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle_.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: nums = [2,2,3,4]
+<strong>Output:
+</strong> 3
+<strong>Explanation:
+</strong> Valid combinations are: 
 2,3,4 (using the first 2)
 2,3,4 (using the second 2)
 2,2,3
-</pre>
+</code></pre>
 
-<p><strong class="example">Example 2:</strong></p>
+**Example 2:**
 
-<pre><strong>Input:</strong> nums = [4,2,3,4]
-<strong>Output:</strong> 4
-</pre>
+<pre><code>Input: nums = [4,2,3,4]
+<strong>Output:
+</strong> 4
+</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
-	<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
-</ul>
-</div>
+**Constraints:**
+
+* `1 <= nums.length <= 1000`
+* `0 <= nums[i] <= 1000`

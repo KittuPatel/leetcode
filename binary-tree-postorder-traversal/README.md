@@ -1,31 +1,41 @@
-<h2>  Binary Tree Postorder Traversal</h2><hr><div><p>Given the <code>root</code> of a&nbsp;binary tree, return <em>the postorder traversal of its nodes' values</em>.</p>
+# Binary Tree Postorder Traversal
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/08/28/pre1.jpg" style="width: 127px; height: 200px;">
-<pre><strong>Input:</strong> root = [1,null,2,3]
-<strong>Output:</strong> [3,2,1]
-</pre>
 
-<p><strong>Example 2:</strong></p>
 
-<pre><strong>Input:</strong> root = []
-<strong>Output:</strong> []
-</pre>
+Given the `root` of a binary tree, return _the postorder traversal of its nodes' values_.
 
-<p><strong>Example 3:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> root = [1]
-<strong>Output:</strong> [1]
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+![](https://assets.leetcode.com/uploads/2020/08/28/pre1.jpg)
 
-<ul>
-	<li>The number of the nodes in the tree is in the range <code>[0, 100]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
-</ul>
+<pre><code>Input: root = [1,null,2,3]
+<strong>Output:
+</strong> [3,2,1]
+</code></pre>
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</div>
+**Example 2:**
+
+<pre><code>Input: root = []
+<strong>Output:
+</strong> []
+</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: root = [1]
+<strong>Output:
+</strong> [1]
+</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of the nodes in the tree is in the range `[0, 100]`.
+* `-100 <= Node.val <= 100`
+
+&#x20;
+
+**Follow up:** Recursive solution is trivial, could you do it iteratively?
