@@ -9,6 +9,7 @@ class Solution:
                 val = int(s[idx: j+1])
                 if prev - 1 == val:
                     if dfs(j+1, val): return True
+            return False
         
         for i in range(len(s)-1):
             val = int(s[:i+1])
