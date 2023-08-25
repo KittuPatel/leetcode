@@ -6,17 +6,17 @@ class Solution:
         
         def isPossible(pagesCount):
             curSum = 0
-            booksAllocCount = 0
+            stuCount = 0
             for i in range(len(A)):
                 if curSum + A[i] <= pagesCount:
                     curSum += A[i]
                 else:
-                    booksAllocCount += 1
+                    stuCount += 1
                     curSum = A[i]
             
-            booksAllocCount += 1  # Count the last student.
+            stuCount += 1  # Count the last student.
             
-            if booksAllocCount <= M:
+            if stuCount <= M:
                 return True
             return False
                     
