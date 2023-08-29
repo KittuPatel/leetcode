@@ -1,45 +1,31 @@
-# 100. Same Tree
+<h2><a href="https://leetcode.com/problems/same-tree/">100. Same Tree</a></h2><h3>Easy</h3><hr><div><p>Given the roots of two binary trees <code>p</code> and <code>q</code>, write a function to check if they are the same or not.</p>
 
-## Easy
+<p>Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg" style="width: 622px; height: 182px;">
+<pre><strong>Input:</strong> p = [1,2,3], q = [1,2,3]
+<strong>Output:</strong> true
+</pre>
 
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg" style="width: 382px; height: 182px;">
+<pre><strong>Input:</strong> p = [1,2], q = [1,null,2]
+<strong>Output:</strong> false
+</pre>
 
-Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.
+<p><strong class="example">Example 3:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg" style="width: 622px; height: 182px;">
+<pre><strong>Input:</strong> p = [1,2,1], q = [1,1,2]
+<strong>Output:</strong> false
+</pre>
 
-Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-&#x20;
-
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg)
-
-<pre><code>Input: p = [1,2,3], q = [1,2,3]
-<strong>Output:
-</strong> true
-</code></pre>
-
-**Example 2:**
-
-![](https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg)
-
-<pre><code>Input: p = [1,2], q = [1,null,2]
-<strong>Output:
-</strong> false
-</code></pre>
-
-**Example 3:**
-
-![](https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg)
-
-<pre><code>Input: p = [1,2,1], q = [1,1,2]
-<strong>Output:
-</strong> false
-</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* The number of nodes in both trees is in the range `[0, 100]`.
-* `-104 <= Node.val <= 104`
+<ul>
+	<li>The number of nodes in both trees is in the range <code>[0, 100]</code>.</li>
+	<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
+</ul>
+</div>
