@@ -2,18 +2,14 @@ class Solution:
     def kthFactor(self, n: int, k: int) -> int:
         
         # 1 2 3 4 5 6 .... n
-        
-        
-        
-        
-        fact_list = []
+        count = 0
         for i in range(1, n+1):
             if n%i == 0:
-                fact_list.append(i)
-                if len(fact_list) == k:
-                    return fact_list[-1]
+                count+=1
+                if count == k:
+                    return i
             
-        if k > len(fact_list):
+        if k > count:
             return -1
         
         return fact_list[k-1]
