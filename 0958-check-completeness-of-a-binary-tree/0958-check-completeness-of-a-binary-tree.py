@@ -11,18 +11,18 @@ class Solution:
             return True
         
         queue = collections.deque([root])
-        null_flag = False
+        res = []
         
         while queue:
-            node = queue.popleft()
+            for _ in range(len(queue)):
+                node = queue.popleft()
 
-            if not node:
-                null_flag = True
-            else:
-                if null_flag == True:
-                    return False
-    
-                queue.append(node.left)
-                queue.append(node.right)
+                if not node:
+                    res.append(None)
+                else:
+                    if res and res[-1] == None:
+                        return False
+                    queue.append(node.left)
+                    queue.append(node.right)
                     
         return True
