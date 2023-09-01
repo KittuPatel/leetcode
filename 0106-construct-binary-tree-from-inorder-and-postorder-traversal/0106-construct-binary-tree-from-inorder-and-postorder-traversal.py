@@ -7,16 +7,37 @@
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
         
-        if not inorder:
-            return None
         
-        root = TreeNode(postorder.pop())
+#         O(n^2)
+
+#         if not inorder:
+#             return None
         
-        idx = inorder.index(root.val)
+#         root = TreeNode(postorder.pop())
         
-        root.right = self.buildTree(inorder[idx+1:], postorder)
-        root.left = self.buildTree(inorder[:idx], postorder)
+#         idx = inorder.index(root.val)
         
-        return root
+#         root.right = self.buildTree(inorder[idx+1:], postorder)
+#         root.left = self.buildTree(inorder[:idx], postorder)
         
+#         return root
+        
+        inorderIdx = {val:idx for idx, val in enumerate(inorder)}
+        
+        def helper(left, right):
+            
+            if left > right:
+                return None
+            
+            root = TreeNode(postorder.pop())
+            
+            idx = inorderIdx[root.val]
+            root.right = helper(idx+1, right)
+            root.left = helper(left, idx-1)
+            
+            return root
+        
+        return helper(0, len(inorder)-1)
+            
+    
         
