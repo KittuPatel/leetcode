@@ -8,23 +8,21 @@ class Solution:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         # [1], [3,2], [5, 3, None, 9]
         
-        queue = collections.deque([[root, 1, 0]]) # node, numID, level
-        prevLevel = 0
-        prevNum = 1
+        queue = collections.deque([[root, 1]]) # node, numID
         res = 0
         
         while queue:
-            node, num, level = queue.popleft()
+            # keep track of first element in each level
+            _, start_idx = queue[0]
             
-            if level > prevLevel:
-                prevLevel = level
-                prevNum = num
+            for i in range(len(queue)):
+                node, numId = queue.popleft()
             
-            res = max(res, num-prevNum+1)
-            
-            if node.left:
-                queue.append([node.left, 2*num, level+1])
-            if node.right:
-                queue.append([node.right, 2*num+1, level+1])
+                if node.left:
+                    queue.append([node.left, 2*numId])
+                if node.right:
+                    queue.append([node.right, 2*numId+1])
+                
+            res = max(res, numId-start_idx+1)
                 
         return res
