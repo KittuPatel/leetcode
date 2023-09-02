@@ -11,10 +11,10 @@ class Solution:
         
         while q:
             mgr, time = q.popleft()
-            res = max(res, time)
+            
             for emp in adjMap[mgr]:
                 q.append((emp, time+informTime[mgr]))
-            
+            res = max(res, time)
         return res
         
         
